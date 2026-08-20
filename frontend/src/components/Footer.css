@@ -1,0 +1,76 @@
+/* Default styles for laptop/desktop */
+.app-footer {
+  background-color: #f8f9fa;
+  padding: 20px 40px;
+  border-top: 1px solid #e7e7e7;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens before media queries kick in */
+  gap: 15px; /* Provides space between items if they wrap */
+  max-width: 1200px; /* Optional: Constrain the width of footer content */
+  margin: 0 auto; /* Center the content */
+}
+
+.footer-copyright,
+.footer-crafted {
+  margin: 0;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center links if they wrap */
+}
+
+.social-links a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.social-links a .fab,
+.social-links a .fas {
+  margin-right: 5px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .app-footer {
+    padding: 15px 20px;
+  }
+
+  .footer-content {
+    gap: 8px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

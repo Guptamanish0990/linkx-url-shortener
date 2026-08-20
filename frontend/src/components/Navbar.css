@@ -1,0 +1,606 @@
+/* ============================================================
+   NAVBAR - Complete Styles
+   ============================================================ */
+
+.app-navbar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 24px;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  gap: 20px;
+}
+
+/* ----- Brand ----- */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.brand-tag {
+  font-size: 10px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ----- Navigation Links ----- */
+.app-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.app-nav-link {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-nav-link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.app-nav-link.active {
+  background: #eef2ff;
+  color: #6366f1;
+}
+
+.app-nav-link i {
+  font-size: 14px;
+}
+
+/* ----- Right Section ----- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ----- Auth Buttons ----- */
+.nav-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-login-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-login-btn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.nav-register-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+/* ----- User Menu ----- */
+.nav-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 50px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-user-menu:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.nav-user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.nav-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-logout-button {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-logout-button:hover {
+  color: #ef4444;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .app-navbar {
+    padding: 0 12px;
+  }
+
+  .nav-container {
+    height: 60px; /* Fixed height for mobile nav */
+  }
+
+  .brand-text {
+    display: none; /* Hide text, show only logo */
+  }
+  
+  .app-nav-links {
+      flex: 1;
+      justify-content: center;
+  }
+
+  .app-nav-link {
+    font-size: 14px;
+  }
+  
+  .app-nav-link i {
+      display: none; /* Hide dashboard icon */
+  }
+
+  .nav-user-name {
+    display: none; /* Hide user name */
+  }
+
+  .nav-user-menu {
+    gap: 8px;
+  }
+
+  .nav-logout-button {
+    font-size: 0; /* Hide "Logout" text */
+    padding: 4px;
+  }
+
+  .nav-logout-button i {
+    font-size: 16px; /* Keep icon visible */
+    margin-right: 0;
+  }
+  
+  .nav-user-info {
+      line-height: 1;
+  }
+}
+
+@media (max-width: 480px) {
+    .app-nav-link {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .nav-user-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+    
+    .nav-logout-button i {
+        font-size: 15px;
+    }
+}
+/* ============================================================
+   NAVBAR - Complete Styles
+   ============================================================ */
+
+/* ----- Reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- Navbar Container ----- */
+.app-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 24px;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  gap: 20px;
+}
+
+/* ----- Brand / Logo ----- */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.brand-tag {
+  font-size: 10px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ----- Navigation Links ----- */
+.app-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.app-nav-link {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-nav-link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.app-nav-link.active {
+  background: #eef2ff;
+  color: #6366f1;
+}
+
+.app-nav-link i {
+  font-size: 14px;
+}
+
+/* ----- Right Section ----- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ----- Auth Buttons (Login/Sign Up) ----- */
+.nav-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-login-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-login-btn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.nav-register-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+/* ----- User Menu (Logged In) ----- */
+.nav-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 50px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-user-menu:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.nav-user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.nav-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-logout-button {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-logout-button:hover {
+  color: #ef4444;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+/* ----- Tablet ----- */
+@media (max-width: 768px) {
+  .app-navbar {
+    padding: 0 16px;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 0;
+    gap: 10px;
+  }
+
+  .brand-text .brand-tag {
+    display: none;
+  }
+
+  .app-nav-links {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .app-nav-link {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .nav-user-name {
+    max-width: 80px;
+  }
+
+  .nav-login-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .nav-register-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
+
+/* ----- Mobile ----- */
+@media (max-width: 480px) {
+  .app-navbar {
+    padding: 0 12px;
+  }
+
+  .nav-container {
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .app-nav-link {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .app-nav-link i {
+    font-size: 12px;
+  }
+
+  .nav-user-menu {
+    padding: 2px 8px 2px 2px;
+  }
+
+  .nav-user-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .nav-user-name {
+    font-size: 12px;
+    max-width: 60px;
+  }
+
+  .nav-login-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .nav-register-btn {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+
+  .nav-auth-buttons {
+    gap: 6px;
+  }
+}
